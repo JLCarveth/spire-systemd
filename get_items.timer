@@ -1,0 +1,10 @@
+[Unit]
+Description=get_items.timer
+Requires=get_items.service
+
+[Timer]
+Unit=get_items.service
+OnCalendar=weekly
+
+[Install]
+WantedBy=multi-user.target

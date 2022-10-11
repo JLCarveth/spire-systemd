@@ -1,0 +1,16 @@
+[Unit]
+Description=spinv-backend.js - A REST-style HTTP web server that manages user authentication and data storage
+Documentation=https://git.jlcarveth.dev/JLCarveth/spinv-backend/wiki
+After=network.target
+
+[Service]
+EnvironmentFile=/opt/spinv-backend/.env
+WorkingDirectory=/opt/spinv-backend
+Restart=always
+ExecStartPre=/usr/bin/npm i
+ExecStart=/usr/bin/node /opt/spinv-backend/index.js
+StandardOutput=append:/var/log/spinv-backend/out.log
+StandardError=append:/var/log/spinv-backend/error.log
+
+[Install]
+WantedBy=multi-user.target

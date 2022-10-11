@@ -1,0 +1,9 @@
+[Unit]
+Description=Monitor /opt/spinv-backend/reports/ for changes
+
+[Path]
+PathChanged=/opt/spinv-backend/reports/
+Unit=report.service
+
+[Install]
+WantedBy=multi-user.target

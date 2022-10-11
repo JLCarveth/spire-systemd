@@ -1,0 +1,18 @@
+[Unit]
+Description=express-proxy.js - An express-based web proxy for bypassing CORS errors on web-broswer applications
+Documentation=https://git.jlcarveth.dev/JLCarveth/express-proxy/wiki
+After=network.target
+
+[Service]
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment="NODE_ENV=production"
+Environment="DO_LOGGING=true"
+WorkingDirectory=/opt/express-proxy
+Restart=always
+ExecStartPre=/usr/bin/npm i
+ExecStart=/usr/bin/node /opt/express-proxy/index.js
+StandardOutput=append:/var/log/express-proxy/out.log
+StandardError=append:/var/log/express-proxy/error.log
+
+[Install]
+WantedBy=multi-user.target

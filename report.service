@@ -1,0 +1,9 @@
+[Unit]
+Description=Converts and prints spire-inventory reports.
+
+[Service]
+Type=oneshot
+ExecStart=/opt/spinv-backend/printReports.sh
+
+[Install]
+WantedBy=multi-user.target

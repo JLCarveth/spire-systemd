@@ -1,0 +1,15 @@
+[Unit]
+Description=lifetimes.js
+Requires=get_items.service
+After=network.target
+
+[Service]
+EnvironmentFile=/opt/spinv-backend/.env
+WorkingDirectory=/opt/spire-pricing/
+ExecStart=/usr/bin/node /opt/spire-pricing/lifetimes.js
+StandardOutput=file:/var/log/spire-pricing/lifetimes.log
+StandardError=file:/var/log/spire-pricing/error.lifetimes.log
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
