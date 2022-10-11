@@ -1,0 +1,14 @@
+[Unit]
+Description=weekly_sales.js
+After=network.target
+
+[Service]
+EnvironmentFile=/opt/spinv-backend/.env
+WorkingDirectory=/opt/spire-pricing/
+ExecStart=/usr/bin/node /opt/spire-pricing/weekly_sales.js
+StandardOutput=file:/var/log/spire-pricing/weekly_sales.log
+StandardError=file:/var/log/spire-pricing/weekly_sales.error.log
+ExecStartPost=/usr/bin/systemctl restart weekly_sales.service
+
+[Install]
+WantedBy=multi-user.target
