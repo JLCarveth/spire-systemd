@@ -9,6 +9,7 @@ WorkingDirectory=/opt/spire-pricing/
 ExecStart=/usr/bin/node /opt/spire-pricing/lifetimes.js
 StandardOutput=file:/var/log/spire-pricing/lifetimes.log
 StandardError=file:/var/log/spire-pricing/error.lifetimes.log
+ExecStartPost=/usr/bin/systemctl restart weekly_sales.service
 Type=simple
 
 [Install]
