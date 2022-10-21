@@ -4,6 +4,7 @@ After=network.target
 
 [Service]
 EnvironmentFile=/opt/spinv-backend/.env
+EnvironmentFile=/opt/spire-pricing/.env
 WorkingDirectory=/opt/spire-pricing/
 ExecStart=/usr/bin/node /opt/spire-pricing/weekly_sales.js
 StandardOutput=file:/var/log/spire-pricing/weekly_sales.log
