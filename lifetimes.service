@@ -1,7 +1,7 @@
 [Unit]
 Description=lifetimes.js
 Requires=get_items.service
-After=network.target
+After=network.target postgresql.service
 
 [Service]
 EnvironmentFile=/opt/spinv-backend/.env
