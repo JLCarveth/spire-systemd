@@ -1,6 +1,6 @@
 [Unit]
 Description=express-proxy.js - An express-based web proxy for bypassing CORS errors on web-broswer applications
-Documentation=https://git.jlcarveth.dev/JLCarveth/express-proxy/wiki
+Documentation=https://github.com/JLCarveth/express-proxy/wiki
 After=network.target
 
 [Service]
