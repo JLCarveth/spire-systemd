@@ -1,0 +1,9 @@
+[Unit]
+Description=Prints and archives PDF files
+
+[Service]
+Type=oneshot
+ExecStart=/opt/spire-systemd/scripts/print.sh
+
+[Install]
+WantedBy=multi-user.target

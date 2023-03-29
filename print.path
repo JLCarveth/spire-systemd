@@ -1,0 +1,9 @@
+[Unit]
+Description=Triggers print.service on PathChanged
+
+[Path]
+PathChanged=/opt/spinv-backend/inbound/
+Unit=print.service
+
+[Install]
+WantedBy=multi-user.target
