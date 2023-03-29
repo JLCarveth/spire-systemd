@@ -1,6 +1,6 @@
 [Unit]
 Description=spinv-backend.js - A REST-style HTTP web server that manages user authentication and data storage
-Documentation=https://git.jlcarveth.dev/JLCarveth/spinv-backend/wiki
+Documentation=https://github.com/JLCarveth/spinv-backend/wiki
 After=network.target
 
 [Service]
